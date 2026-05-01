@@ -1,0 +1,300 @@
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~
+$ pwd
+/c/Users/Gautham
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~
+$ cd C:\Users\Gautham\projects_llm
+bash: cd: C:UsersGauthamprojects_llm: No such file or directory
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~
+$ cd c/users/gautham/project_llm
+bash: cd: c/users/gautham/project_llm: No such file or directory
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~
+$ pwd
+/c/Users/Gautham
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~
+$ cd projects_llm
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm
+$ mkdir git_demo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm
+$ pwd
+/c/Users/Gautham/projects_llm
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm
+$ cd git_demo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo
+$ mkdir FirstRepo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo
+$ cd FirstRepo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo
+$ git init
+Initialized empty Git repository in C:/Users/Gautham/projects_llm/git_demo/FirstRepo/.git/
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ touch alpha.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ notepad alpha.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alpha.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git add .
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   alpha.txt
+
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git commit -m "first commit"
+[master (root-commit) 0494bf9] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 alpha.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git log
+commit 0494bf9aa373bedcefb39a71078f11028a628590 (HEAD -> master)
+Author: Gautham <t4sgunacgautham@gmail.com>
+Date:   Fri May 1 11:31:47 2026 +0530
+
+    first commit
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ touch beta.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ notepad beta.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ notepad alpha.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   alpha.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        beta.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git add .
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git commit -m "second commiit"
+[master 4ded9ae] second commiit
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 beta.txt
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git log
+commit 4ded9ae5f84bf3f14db57821a06185d786a5ac84 (HEAD -> master)
+Author: Gautham <t4sgunacgautham@gmail.com>
+Date:   Fri May 1 11:34:20 2026 +0530
+
+    second commiit
+
+commit 0494bf9aa373bedcefb39a71078f11028a628590
+Author: Gautham <t4sgunacgautham@gmail.com>
+Date:   Fri May 1 11:31:47 2026 +0530
+
+    first commit
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git chceckout
+git: 'chceckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git checkout
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git remote add origin https://github.com/python123-dev/FirstRepo.git
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git remote -v
+origin  https://github.com/python123-dev/FirstRepo.git (fetch)
+origin  https://github.com/python123-dev/FirstRepo.git (push)
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git push -u oragin master
+fatal: 'oragin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git push -u origin master
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/python123-dev/FirstRepo.git/'
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 506 bytes | 253.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/python123-dev/FirstRepo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_py/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git add .
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git commit -m "added python folder"
+[master f0c8b3c] added python folder
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git_py/hello.py
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 377 bytes | 377.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/python123-dev/FirstRepo.git
+   4ded9ae..f0c8b3c  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ pwd
+/c/Users/Gautham/projects_llm/git_demo/FirstRepo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ ../
+bash: ../: Is a directory
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ pwd
+/c/Users/Gautham/projects_llm/git_demo/FirstRepo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ ..
+bash: ..: command not found
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ pwd
+/c/Users/Gautham/projects_llm/git_demo/FirstRepo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/FirstRepo (master)
+$ cd ..
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo
+$ pwd
+/c/Users/Gautham/projects_llm/git_demo
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo
+$ mkdir changes
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo
+$ cd changes
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes
+$ pwd
+/c/Users/Gautham/projects_llm/git_demo/changes
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes
+$ git init
+Initialized empty Git repository in C:/Users/Gautham/projects_llm/git_demo/changes/.git/
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git pull https://github.com/python123-dev/FirstRepo.git
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 11 (delta 1), reused 10 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (11/11), 769 bytes | 1024 bytes/s, done.
+From https://github.com/python123-dev/FirstRepo
+ * branch            HEAD       -> FETCH_HEAD
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   alpha.txt
+        modified:   beta.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git add .
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git commit -m "changes made"
+[master 3bd27d7] changes made
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git remote add origin https://github.com/python123-dev/FirstRepo.git
+
+Gautham@LAPTOP-AU85R3S5 MINGW64 ~/projects_llm/git_demo/changes (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 351 bytes | 351.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/python123-dev/FirstRepo.git
+   f0c8b3c..3bd27d7  master -> master
+branch 'master' set up to track 'origin/master'.
