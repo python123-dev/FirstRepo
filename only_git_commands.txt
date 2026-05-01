@@ -1,0 +1,48 @@
+pwd
+cd projects_llm
+mkdir git_demo
+pwd
+cd git_demo
+mkdir FirstRepo
+cd FirstRepo
+git init
+touch alpha.txt
+notepad alpha.txt
+git status
+git add .
+git status
+git commit -m "first commit"
+git log
+touch beta.txt
+notepad beta.txt
+notepad alpha.txt
+git status
+git add .
+git commit -m "second commiit"
+git log
+git chceckout
+git checkout
+git status
+git remote add origin https://github.com/python123-dev/FirstRepo.git
+git remote -v
+git push -u oragin master
+git push -u origin master
+git push -u origin master
+git status
+git add .
+git commit -m "added python folder"
+git push -u origin master
+pwd
+cd ..
+pwd
+mkdir changes
+cd changes
+pwd
+git init
+git pull https://github.com/python123-dev/FirstRepo.git
+git status
+git add .
+git commit -m "changes made"
+git status
+git remote add origin https://github.com/python123-dev/FirstRepo.git
+git push -u origin master
